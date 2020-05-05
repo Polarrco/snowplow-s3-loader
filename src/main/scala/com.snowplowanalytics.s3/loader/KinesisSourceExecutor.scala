@@ -77,6 +77,7 @@ class KinesisSourceExecutor(
             + kcc.CONNECTOR_DESTINATION + ","
             + KinesisConnectorConfiguration.KINESIS_CONNECTOR_USER_AGENT)
           .withRegionName(kcc.REGION_NAME)
+          .withMetricsLevel(com.amazonaws.services.kinesis.metrics.interfaces.MetricsLevel.NONE)
 
       timestamp.filter(_ => initialPosition == "AT_TIMESTAMP")
         .map(cfg.withTimestampAtInitialPositionInStream)

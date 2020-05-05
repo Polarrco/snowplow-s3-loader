@@ -12,3 +12,4 @@ project/plugins/project/
 # Vagrant
 .vagrant
 VERSION
+.DS_Store
